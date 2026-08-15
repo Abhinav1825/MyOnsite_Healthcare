@@ -33,3 +33,19 @@ SENSOR_CONFLICT_WINDOW_SECONDS = int(os.environ.get("SENSOR_CONFLICT_WINDOW_SECO
 
 VALID_SOURCES = ("sensor", "ai", "blockchain")
 VALID_SAFETY_STATES = ("safe", "alert", "danger")
+
+# --- Multi-vehicle proximity (bonus scope) ---
+# Two vehicles closer than this are flagged with a proximity alert.
+PROXIMITY_DISTANCE_THRESHOLD = float(os.environ.get("PROXIMITY_DISTANCE_THRESHOLD", "10.0"))
+
+# Only vehicles with a reconciled state within this many seconds of each
+# other are compared - stale positions from long ago shouldn't be treated
+# as "currently near" one another.
+PROXIMITY_TIME_WINDOW_SECONDS = int(os.environ.get("PROXIMITY_TIME_WINDOW_SECONDS", "30"))
+
+# If two vehicles are within PROXIMITY_DISTANCE_THRESHOLD AND closing at
+# more than this speed (position units/sec, estimated from trajectory),
+# the alert is escalated from "alert" to "danger".
+PROXIMITY_CLOSING_SPEED_THRESHOLD = float(
+    os.environ.get("PROXIMITY_CLOSING_SPEED_THRESHOLD", "0.5")
+)

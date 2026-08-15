@@ -22,6 +22,7 @@ from datetime import datetime, timezone
 
 from app import db
 from app.engine.conflict import determine_safety_state
+from app.engine.proximity import check_proximity_for_vehicle
 from app.engine.reconstruction import gather_relevant_events
 
 
@@ -111,6 +112,12 @@ def reconcile(vehicle_id, timestamp):
         "generated_at": datetime.now(timezone.utc),
     }
     db.audit_trail_col().insert_one(dict(audit_doc))
+
+    if state_doc["position"] is not None:
+        # Bonus scope: multi-vehicle proximity. A pure addition - doesn't
+        # affect this vehicle's own safety_state/audit_trail, just may
+        # produce separate proximity_alerts entries for nearby vehicles.
+        check_proximity_for_vehicle(vehicle_id, timestamp, state_doc["position"])
 
     return state_doc, audit_doc, True
 

@@ -8,8 +8,12 @@
 <body>
   <header>
     <h1>Vehicle Safety Reconciliation Dashboard</h1>
-    <button id="refresh-btn">Refresh</button>
+    <div class="header-actions">
+      <button id="replay-btn">Replay &amp; Verify</button>
+      <button id="refresh-btn">Refresh</button>
+    </div>
   </header>
+  <p id="replay-result" class="hint" hidden></p>
 
   <main>
     <section id="vehicles-section">
@@ -32,7 +36,11 @@
 
     <section id="audit-section">
       <h2 id="audit-title">Audit Trail</h2>
-      <p id="audit-hint" class="hint">Click a vehicle row above to see its full decision history.</p>
+      <p id="audit-hint" class="hint">Click a vehicle row above to see its full decision history, state timeline, and audit trail.</p>
+      <div id="timeline-container" hidden>
+        <h3>State timeline</h3>
+        <svg id="timeline-svg" class="viz-root"></svg>
+      </div>
       <table id="audit-table" hidden>
         <thead>
           <tr>
@@ -45,6 +53,35 @@
           </tr>
         </thead>
         <tbody id="audit-tbody"></tbody>
+      </table>
+    </section>
+
+    <section id="trajectories-section">
+      <h2>Vehicle trajectories</h2>
+      <p class="hint">Position over time for every vehicle with sensor data. Hover a point for details.</p>
+      <div class="viz-root">
+        <svg id="trajectories-svg" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="trajectories-legend" class="legend"></div>
+      </div>
+    </section>
+
+    <section id="proximity-section">
+      <h2>Multi-vehicle proximity alerts</h2>
+      <p class="hint">Pairs of vehicles reconciled close together, with an estimated closing speed.</p>
+      <table id="proximity-table">
+        <thead>
+          <tr>
+            <th>Vehicle A</th>
+            <th>Vehicle B</th>
+            <th>Distance</th>
+            <th>Closing Speed</th>
+            <th>Severity</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody id="proximity-tbody">
+          <tr><td colspan="6" class="empty">Loading&hellip;</td></tr>
+        </tbody>
       </table>
     </section>
   </main>

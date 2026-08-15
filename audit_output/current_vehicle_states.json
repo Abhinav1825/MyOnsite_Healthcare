@@ -9,7 +9,7 @@
       "x": 25.0,
       "y": 30.0
     },
-    "reconciled_at": "2026-08-15T08:46:25.541000+00:00",
+    "reconciled_at": "2026-08-15T09:09:41.819000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
@@ -21,15 +21,15 @@
   {
     "decision_reason": "sensor_only_source",
     "events_considered": [
-      "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe",
-      "bfb235b52636caccc710e4d79eeacb992e860c947dab48d1b0736b843f2ba9f2"
+      "4cad12d080e96203ec5d2588414fb3daa8765569834e038421c217c8c644de2b",
+      "b73004d2cd496fa219b8518877841cea760bea657bd132139908965920bd32d0"
     ],
     "interpolated": false,
     "position": {
-      "x": 5.4,
-      "y": 5.1
+      "x": 1005.4,
+      "y": 1005.1
     },
-    "reconciled_at": "2026-08-15T08:46:25.651000+00:00",
+    "reconciled_at": "2026-08-15T09:09:41.902000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
@@ -41,15 +41,15 @@
   {
     "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.85",
     "events_considered": [
-      "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+      "22a941674cb1a9fbde4620d0bfbcd1f9b0d2528a23664ea6479244195b0fc1cf",
       "440b926e7606d31fa2e6a13ccc6e78515ccbf0ceab4ca4cf3c3710f5e1085717"
     ],
     "interpolated": false,
     "position": {
-      "x": 50.0,
-      "y": 5.0
+      "x": 2050.0,
+      "y": 2005.0
     },
-    "reconciled_at": "2026-08-15T08:46:25.745000+00:00",
+    "reconciled_at": "2026-08-15T09:09:41.983000+00:00",
     "safety_state": "danger",
     "source_of_truth": "ai",
     "superseded": false,
@@ -59,21 +59,21 @@
     "version": 2
   },
   {
-    "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
+    "decision_reason": "sensor_only_source",
     "events_considered": [
-      "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
-      "e0e2284dae61a63414b187f99152a86cf85df19f95903157276fb198797ca6e7"
+      "67d54961e7d7edb0bb0a5cb1ce33b239f04db4da1743072d96a706ed27f006ae",
+      "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6"
     ],
     "interpolated": false,
     "position": {
-      "x": 40.0,
-      "y": 2.0
+      "x": 3040.0,
+      "y": 3002.0
     },
-    "reconciled_at": "2026-08-15T08:46:25.837000+00:00",
+    "reconciled_at": "2026-08-15T09:09:42.605000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
-    "timestamp": "2026-08-15T07:10:00+00:00",
+    "timestamp": "2026-08-15T07:20:00+00:00",
     "vehicle_id": "veh_004",
     "velocity": 19.0,
     "version": 1
@@ -81,19 +81,57 @@
   {
     "decision_reason": "sensor_only_source",
     "events_considered": [
-      "d8f07591a39eca3c37d099ceb3a44833d1fb3f11f5dd22b49b19dd8836bd2bd4"
+      "1dc775cbe37ae94d4c3b82247381ad5ddf91388b0ceaa017350f3f7b8bc692d0"
     ],
     "interpolated": false,
     "position": {
-      "x": 1.0,
-      "y": 1.0
+      "x": 4001.0,
+      "y": 4001.0
     },
-    "reconciled_at": "2026-08-15T08:46:25.870000+00:00",
+    "reconciled_at": "2026-08-15T09:09:42.089000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
     "timestamp": "2026-08-15T07:00:00+00:00",
     "vehicle_id": "veh_005",
+    "velocity": 10.0,
+    "version": 1
+  },
+  {
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "0c5ea18e75e811b314b100aae82df3b3686d7bdf82235900ebfb8ccb56a26133"
+    ],
+    "interpolated": false,
+    "position": {
+      "x": 40.0,
+      "y": 0.0
+    },
+    "reconciled_at": "2026-08-15T09:09:42.262000+00:00",
+    "safety_state": "safe",
+    "source_of_truth": "sensor",
+    "superseded": false,
+    "timestamp": "2026-08-15T08:00:10+00:00",
+    "vehicle_id": "veh_006a",
+    "velocity": 10.0,
+    "version": 1
+  },
+  {
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "e5d0b6753a285e35e33e45973664820da8be756aed76218614e185242756dbc4"
+    ],
+    "interpolated": false,
+    "position": {
+      "x": 46.0,
+      "y": 0.0
+    },
+    "reconciled_at": "2026-08-15T09:09:42.285000+00:00",
+    "safety_state": "safe",
+    "source_of_truth": "sensor",
+    "superseded": false,
+    "timestamp": "2026-08-15T08:00:10+00:00",
+    "vehicle_id": "veh_006b",
     "velocity": 10.0,
     "version": 1
   }

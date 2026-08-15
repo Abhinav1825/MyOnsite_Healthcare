@@ -1,0 +1,11 @@
+[
+  {
+    "closing_speed": 10.800000000000002,
+    "distance": 6.0,
+    "reason": "distance_6.00_closing_speed_10.80",
+    "severity": "danger",
+    "timestamp": "2026-08-15T08:00:10+00:00",
+    "vehicle_a": "veh_006a",
+    "vehicle_b": "veh_006b"
+  }
+]

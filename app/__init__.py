@@ -11,11 +11,15 @@ def create_app():
     from app.routes.vehicles import vehicles_bp
     from app.routes.audit import audit_bp
     from app.routes.replay import replay_bp
+    from app.routes.proximity import proximity_bp
+    from app.routes.blockchain import blockchain_bp
 
     app.register_blueprint(events_bp)
     app.register_blueprint(vehicles_bp)
     app.register_blueprint(audit_bp)
     app.register_blueprint(replay_bp)
+    app.register_blueprint(proximity_bp)
+    app.register_blueprint(blockchain_bp)
 
     @app.get("/health")
     def health():

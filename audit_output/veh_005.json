@@ -4,14 +4,14 @@
     {
       "decision_reason": "sensor_only_source",
       "events_considered": [
-        "d8f07591a39eca3c37d099ceb3a44833d1fb3f11f5dd22b49b19dd8836bd2bd4"
+        "1dc775cbe37ae94d4c3b82247381ad5ddf91388b0ceaa017350f3f7b8bc692d0"
       ],
       "interpolated": false,
       "position": {
-        "x": 1.0,
-        "y": 1.0
+        "x": 4001.0,
+        "y": 4001.0
       },
-      "reconciled_at": "2026-08-15T08:46:25.870000+00:00",
+      "reconciled_at": "2026-08-15T09:09:42.089000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -26,10 +26,10 @@
       "conflicts_resolved": {},
       "decision_reason": "sensor_only_source",
       "events_considered": [
-        "d8f07591a39eca3c37d099ceb3a44833d1fb3f11f5dd22b49b19dd8836bd2bd4"
+        "1dc775cbe37ae94d4c3b82247381ad5ddf91388b0ceaa017350f3f7b8bc692d0"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T08:46:25.871000+00:00",
+      "generated_at": "2026-08-15T09:09:42.090000+00:00",
       "timestamp": "2026-08-15T07:00:00+00:00",
       "vehicle_id": "veh_005",
       "version": 1

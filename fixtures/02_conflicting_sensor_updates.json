@@ -3,14 +3,14 @@
     "source": "sensor",
     "vehicle_id": "veh_002",
     "timestamp": "2026-08-15T07:00:00Z",
-    "data": { "position": { "x": 5.0, "y": 5.0 }, "velocity": 12.0, "confidence": 0.60, "status": "safe" },
+    "data": { "position": { "x": 1005.0, "y": 1005.0 }, "velocity": 12.0, "confidence": 0.60, "status": "safe" },
     "_note": "lower-confidence reading, near-identical timestamp to the next event"
   },
   {
     "source": "sensor",
     "vehicle_id": "veh_002",
     "timestamp": "2026-08-15T07:00:01Z",
-    "data": { "position": { "x": 5.4, "y": 5.1 }, "velocity": 12.3, "confidence": 0.90, "status": "safe" },
+    "data": { "position": { "x": 1005.4, "y": 1005.1 }, "velocity": 12.3, "confidence": 0.90, "status": "safe" },
     "_note": "higher-confidence reading 1s later - within the conflict window, should be the one chosen"
   }
 ]

@@ -15,20 +15,21 @@ Fields the conflict-resolution rules actually depend on (e.g. `confidence`)
 are read defensively downstream in `app/engine/conflict.py`, with sane
 defaults, rather than being force-required here.
 """
-import hashlib
-import json
 from datetime import datetime, timezone
 
 from dateutil import parser as dateutil_parser
 
 from app import config
+from app.hashing import canonical_json, sha256_hex
 
 
 class ValidationError(Exception):
     """Raised when an incoming event payload fails validation."""
 
 
-def _parse_timestamp(raw):
+def parse_timestamp(raw):
+    """Public: also reused by app/routes/blockchain.py for its own
+    timestamp field, which sits outside the normal POST /events envelope."""
     if not isinstance(raw, str) or not raw.strip():
         raise ValidationError("timestamp must be a non-empty ISO 8601 string")
     try:
@@ -41,15 +42,8 @@ def _parse_timestamp(raw):
     return dt.astimezone(timezone.utc)
 
 
-def _canonical_json(data):
-    # Sorted, whitespace-free JSON so semantically-identical payloads always
-    # hash to the same event_id regardless of key order.
-    return json.dumps(data, sort_keys=True, separators=(",", ":"), default=str)
-
-
 def compute_event_id(source, vehicle_id, timestamp_dt, data):
-    payload = f"{source}|{vehicle_id}|{timestamp_dt.isoformat()}|{_canonical_json(data)}"
-    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+    return sha256_hex(source, vehicle_id, timestamp_dt.isoformat(), canonical_json(data))
 
 
 def validate_event(raw_payload):
@@ -76,7 +70,7 @@ def validate_event(raw_payload):
     if not isinstance(vehicle_id, str) or not vehicle_id.strip():
         raise ValidationError("vehicle_id must be a non-empty string")
 
-    timestamp_dt = _parse_timestamp(raw_payload["timestamp"])
+    timestamp_dt = parse_timestamp(raw_payload["timestamp"])
 
     data = raw_payload["data"]
     if not isinstance(data, dict):

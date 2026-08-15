@@ -49,6 +49,12 @@ def _ensure_indexes(database):
         [("vehicle_id", ASCENDING), ("timestamp", ASCENDING), ("version", ASCENDING)],
         name="vehicle_timestamp_version",
     )
+    # Supports the proximity-check candidate query, which scans across ALL
+    # vehicles (not one vehicle_id) filtered by superseded + a timestamp
+    # window - the index above doesn't help that access pattern.
+    database.vehicle_states.create_index(
+        [("superseded", ASCENDING), ("timestamp", ASCENDING)], name="superseded_timestamp"
+    )
 
     # audit_trail: one decision record per reconciliation
     database.audit_trail.create_index(
@@ -59,6 +65,23 @@ def _ensure_indexes(database):
         unique=True,
         name="uniq_decision",
     )
+
+    # proximity_alerts: one entry per (unordered vehicle pair, timestamp) -
+    # vehicle_a/vehicle_b are always stored sorted so A-vs-B and B-vs-A
+    # collapse to the same document instead of duplicating.
+    database.proximity_alerts.create_index(
+        [("vehicle_a", ASCENDING), ("vehicle_b", ASCENDING), ("timestamp", ASCENDING)],
+        unique=True,
+        name="uniq_pair_timestamp",
+    )
+
+    # mock_blockchain: append-only hash-chained ledger, one chain per vehicle
+    database.mock_blockchain.create_index(
+        [("vehicle_id", ASCENDING), ("block_index", ASCENDING)],
+        unique=True,
+        name="uniq_vehicle_block",
+    )
+    database.mock_blockchain.create_index([("hash", ASCENDING)], unique=True, name="uniq_hash")
 
 
 def events_col():
@@ -73,9 +96,19 @@ def audit_trail_col():
     return get_db().audit_trail
 
 
+def proximity_alerts_col():
+    return get_db().proximity_alerts
+
+
+def mock_blockchain_col():
+    return get_db().mock_blockchain
+
+
 def reset_db():
     """Test helper: drop all collections and re-create indexes."""
     database = get_db()
     database.events.delete_many({})
     database.vehicle_states.delete_many({})
     database.audit_trail.delete_many({})
+    database.proximity_alerts.delete_many({})
+    database.mock_blockchain.delete_many({})

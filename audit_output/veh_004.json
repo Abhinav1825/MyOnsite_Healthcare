@@ -2,17 +2,57 @@
   "vehicle_id": "veh_004",
   "state_history": [
     {
-      "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
+      "decision_reason": "sensor_only_source",
       "events_considered": [
-        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
-        "e0e2284dae61a63414b187f99152a86cf85df19f95903157276fb198797ca6e7"
+        "67d54961e7d7edb0bb0a5cb1ce33b239f04db4da1743072d96a706ed27f006ae",
+        "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6"
       ],
       "interpolated": false,
       "position": {
-        "x": 40.0,
-        "y": 2.0
+        "x": 3040.0,
+        "y": 3002.0
       },
-      "reconciled_at": "2026-08-15T08:46:25.837000+00:00",
+      "reconciled_at": "2026-08-15T09:09:42.605000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:20:00+00:00",
+      "vehicle_id": "veh_004",
+      "velocity": 19.0,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6",
+        "e075f6afcb18ec17cec872a0bfddc20c523397d1f06ef9cdcb89719811368520"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 3040.0,
+        "y": 3002.0
+      },
+      "reconciled_at": "2026-08-15T09:09:42.486000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:15:00+00:00",
+      "vehicle_id": "veh_004",
+      "velocity": 19.0,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
+      "events_considered": [
+        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
+        "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 3040.0,
+        "y": 3002.0
+      },
+      "reconciled_at": "2026-08-15T09:09:42.071000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -24,15 +64,15 @@
     {
       "decision_reason": "blockchain_newer_than_sensor",
       "events_considered": [
-        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08",
-        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328"
+        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
+        "bf0dd612b3465d446d36d9a52b57908178e2b2ac3b293621d1cd4427b8cefd20"
       ],
       "interpolated": false,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 3000.0,
+        "y": 3000.0
       },
-      "reconciled_at": "2026-08-15T08:46:25.808000+00:00",
+      "reconciled_at": "2026-08-15T09:09:42.043000+00:00",
       "safety_state": "alert",
       "source_of_truth": "blockchain",
       "superseded": false,
@@ -44,14 +84,14 @@
     {
       "decision_reason": "sensor_only_source",
       "events_considered": [
-        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08"
+        "bf0dd612b3465d446d36d9a52b57908178e2b2ac3b293621d1cd4427b8cefd20"
       ],
       "interpolated": false,
       "position": {
-        "x": 0.0,
-        "y": 0.0
+        "x": 3000.0,
+        "y": 3000.0
       },
-      "reconciled_at": "2026-08-15T08:46:25.776000+00:00",
+      "reconciled_at": "2026-08-15T09:09:42.024000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -63,16 +103,42 @@
   ],
   "audit_trail": [
     {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "67d54961e7d7edb0bb0a5cb1ce33b239f04db4da1743072d96a706ed27f006ae",
+        "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T09:09:42.606000+00:00",
+      "timestamp": "2026-08-15T07:20:00+00:00",
+      "vehicle_id": "veh_004",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6",
+        "e075f6afcb18ec17cec872a0bfddc20c523397d1f06ef9cdcb89719811368520"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T09:09:42.487000+00:00",
+      "timestamp": "2026-08-15T07:15:00+00:00",
+      "vehicle_id": "veh_004",
+      "version": 1
+    },
+    {
       "conflicts_resolved": {
         "blockchain_vs_sensor": "used_sensor"
       },
       "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
       "events_considered": [
         "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
-        "e0e2284dae61a63414b187f99152a86cf85df19f95903157276fb198797ca6e7"
+        "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T08:46:25.837000+00:00",
+      "generated_at": "2026-08-15T09:09:42.071000+00:00",
       "timestamp": "2026-08-15T07:10:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1
@@ -83,11 +149,11 @@
       },
       "decision_reason": "blockchain_newer_than_sensor",
       "events_considered": [
-        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08",
-        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328"
+        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
+        "bf0dd612b3465d446d36d9a52b57908178e2b2ac3b293621d1cd4427b8cefd20"
       ],
       "final_state": "alert",
-      "generated_at": "2026-08-15T08:46:25.808000+00:00",
+      "generated_at": "2026-08-15T09:09:42.044000+00:00",
       "timestamp": "2026-08-15T07:01:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1
@@ -96,10 +162,10 @@
       "conflicts_resolved": {},
       "decision_reason": "sensor_only_source",
       "events_considered": [
-        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08"
+        "bf0dd612b3465d446d36d9a52b57908178e2b2ac3b293621d1cd4427b8cefd20"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T08:46:25.776000+00:00",
+      "generated_at": "2026-08-15T09:09:42.024000+00:00",
       "timestamp": "2026-08-15T07:00:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1

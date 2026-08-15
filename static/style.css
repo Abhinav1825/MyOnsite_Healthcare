@@ -23,6 +23,8 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
+.header-actions { display: flex; gap: 0.5rem; }
+
 h1 { font-size: 1.4rem; margin: 0; }
 h2 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
 
@@ -77,4 +79,58 @@ code {
   background: var(--bg-alt);
   padding: 0.1rem 0.3rem;
   border-radius: 4px;
+}
+
+/* --- Data visualization additions (bonus scope) --- */
+
+.viz-root {
+  --surface-1: #fcfcfb;
+  --text-secondary: #52514e;
+  --gridline: #e1e0d9;
+}
+
+#timeline-container { margin-top: 1rem; }
+#timeline-container h3 { font-size: 0.95rem; margin: 0 0 0.4rem; color: var(--text-secondary, #52514e); }
+
+#timeline-svg {
+  width: 100%;
+  height: 40px;
+  display: block;
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+#trajectories-section .viz-root {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: var(--surface-1);
+}
+
+#trajectories-svg {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  aspect-ratio: 640 / 360;
+  display: block;
+  background: var(--bg-alt);
+  border-radius: 6px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+}
+
+.legend-item { display: flex; align-items: center; gap: 0.35rem; }
+
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
 }

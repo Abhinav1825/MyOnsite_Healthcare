@@ -20,6 +20,26 @@ def list_vehicles():
     return jsonify([to_json_safe(d) for d in docs])
 
 
+@vehicles_bp.get("/vehicles/trajectories")
+def list_trajectories():
+    """Every vehicle's full position-over-time history in one call (all
+    versions, oldest first per vehicle) - built for the 2D trajectory plot
+    so the dashboard doesn't need one request per vehicle. Note: this
+    route is registered before /vehicles/<vehicle_id> - Flask/Werkzeug
+    matches static path segments before variable ones regardless of
+    registration order, so "trajectories" is never captured as a
+    vehicle_id."""
+    docs = list(
+        db.vehicle_states_col()
+        .find({"position": {"$ne": None}}, {"vehicle_id": 1, "timestamp": 1, "position": 1, "safety_state": 1, "superseded": 1})
+        .sort([("vehicle_id", 1), ("timestamp", 1)])
+    )
+    by_vehicle = {}
+    for d in docs:
+        by_vehicle.setdefault(d["vehicle_id"], []).append(to_json_safe(d))
+    return jsonify(by_vehicle)
+
+
 @vehicles_bp.get("/vehicles/<vehicle_id>")
 def get_vehicle(vehicle_id):
     """Full reconciled state history for one vehicle (all versions, all

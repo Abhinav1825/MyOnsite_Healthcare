@@ -1,0 +1,44 @@
+[
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_006a",
+    "timestamp": "2026-08-15T08:00:00Z",
+    "data": { "position": { "x": 0.0, "y": 0.0 }, "velocity": 10.0, "confidence": 0.9, "status": "safe" },
+    "_note": "vehicle A starts far from vehicle B"
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_006b",
+    "timestamp": "2026-08-15T08:00:00Z",
+    "data": { "position": { "x": 100.0, "y": 0.0 }, "velocity": 10.0, "confidence": 0.9, "status": "safe" },
+    "_note": "vehicle B starts far from vehicle A, on a converging path"
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_006a",
+    "timestamp": "2026-08-15T08:00:05Z",
+    "data": { "position": { "x": 20.0, "y": 0.0 }, "velocity": 10.0, "confidence": 0.9, "status": "safe" },
+    "_note": "A moving toward B (+x direction)"
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_006b",
+    "timestamp": "2026-08-15T08:00:05Z",
+    "data": { "position": { "x": 80.0, "y": 0.0 }, "velocity": 10.0, "confidence": 0.9, "status": "safe" },
+    "_note": "B moving toward A (-x direction); distance is now 60, still above threshold"
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_006a",
+    "timestamp": "2026-08-15T08:00:10Z",
+    "data": { "position": { "x": 40.0, "y": 0.0 }, "velocity": 10.0, "confidence": 0.9, "status": "safe" },
+    "_note": "A continues toward B"
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_006b",
+    "timestamp": "2026-08-15T08:00:10Z",
+    "data": { "position": { "x": 46.0, "y": 0.0 }, "velocity": 10.0, "confidence": 0.9, "status": "safe" },
+    "_note": "distance between A and B is now 6 (< PROXIMITY_DISTANCE_THRESHOLD=10) and both vehicles' estimated trajectories show them closing fast - this timepoint should produce a proximity_alerts entry with severity 'danger'"
+  }
+]

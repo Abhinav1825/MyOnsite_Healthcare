@@ -3,7 +3,7 @@
     "source": "sensor",
     "vehicle_id": "veh_003",
     "timestamp": "2026-08-15T07:00:00Z",
-    "data": { "position": { "x": 0.0, "y": 0.0 }, "velocity": 20.0, "confidence": 0.95, "status": "safe" },
+    "data": { "position": { "x": 2000.0, "y": 2000.0 }, "velocity": 20.0, "confidence": 0.95, "status": "safe" },
     "_note": "high-confidence sensor disagrees with AI - sensor should win (final: safe)"
   },
   {
@@ -16,7 +16,7 @@
     "source": "sensor",
     "vehicle_id": "veh_003",
     "timestamp": "2026-08-15T07:10:00Z",
-    "data": { "position": { "x": 50.0, "y": 5.0 }, "velocity": 22.0, "confidence": 0.50, "status": "safe" },
+    "data": { "position": { "x": 2050.0, "y": 2005.0 }, "velocity": 22.0, "confidence": 0.50, "status": "safe" },
     "_note": "low-confidence sensor disagrees with AI - AI should win (final: danger)"
   },
   {

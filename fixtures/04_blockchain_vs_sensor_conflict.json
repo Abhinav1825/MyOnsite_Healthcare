@@ -3,7 +3,7 @@
     "source": "sensor",
     "vehicle_id": "veh_004",
     "timestamp": "2026-08-15T07:00:00Z",
-    "data": { "position": { "x": 0.0, "y": 0.0 }, "velocity": 18.0, "confidence": 0.90, "status": "safe" }
+    "data": { "position": { "x": 3000.0, "y": 3000.0 }, "velocity": 18.0, "confidence": 0.90, "status": "safe" }
   },
   {
     "source": "blockchain",
@@ -16,7 +16,7 @@
     "source": "sensor",
     "vehicle_id": "veh_004",
     "timestamp": "2026-08-15T07:10:00Z",
-    "data": { "position": { "x": 40.0, "y": 2.0 }, "velocity": 19.0, "confidence": 0.90, "status": "safe" },
+    "data": { "position": { "x": 3040.0, "y": 3002.0 }, "velocity": 19.0, "confidence": 0.90, "status": "safe" },
     "_note": "this sensor reading is NEWER than the 07:01 blockchain log, so the (now-stale) blockchain conflict should be ignored - sensor should win (final: safe)"
   }
 ]

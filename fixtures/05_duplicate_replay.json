@@ -3,13 +3,13 @@
     "source": "sensor",
     "vehicle_id": "veh_005",
     "timestamp": "2026-08-15T07:00:00Z",
-    "data": { "position": { "x": 1.0, "y": 1.0 }, "velocity": 10.0, "confidence": 0.90, "status": "safe" }
+    "data": { "position": { "x": 4001.0, "y": 4001.0 }, "velocity": 10.0, "confidence": 0.90, "status": "safe" }
   },
   {
     "source": "sensor",
     "vehicle_id": "veh_005",
     "timestamp": "2026-08-15T07:00:00Z",
-    "data": { "position": { "x": 1.0, "y": 1.0 }, "velocity": 10.0, "confidence": 0.90, "status": "safe" },
+    "data": { "position": { "x": 4001.0, "y": 4001.0 }, "velocity": 10.0, "confidence": 0.90, "status": "safe" },
     "_note": "exact duplicate of the event above (same source/vehicle_id/timestamp/data) - must be detected as a duplicate, not reprocessed, and must NOT create a second vehicle_states version or audit_trail entry"
   }
 ]
