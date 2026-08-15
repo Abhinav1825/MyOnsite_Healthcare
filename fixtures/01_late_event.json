@@ -1,0 +1,28 @@
+[
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_001",
+    "timestamp": "2026-08-15T07:00:00Z",
+    "data": { "position": { "x": 10.0, "y": 20.0 }, "velocity": 15.0, "confidence": 0.95, "status": "safe" }
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_001",
+    "timestamp": "2026-08-15T07:05:00Z",
+    "data": { "position": { "x": 25.0, "y": 30.0 }, "velocity": 16.0, "confidence": 0.95, "status": "safe" }
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_001",
+    "timestamp": "2026-08-15T07:02:00Z",
+    "data": { "position": { "x": 16.0, "y": 24.0 }, "velocity": 15.4, "confidence": 0.95, "status": "safe" },
+    "_note": "arrives LATE (posted after the 07:05 event) but its own timestamp fills a gap between the 07:00 and 07:05 readings"
+  },
+  {
+    "source": "ai",
+    "vehicle_id": "veh_001",
+    "timestamp": "2026-08-15T07:03:30Z",
+    "data": { "alert": "none", "confidence": 0.7 },
+    "_note": "no sensor reading exists exactly here - position/velocity must be interpolated between the 07:02 and 07:05 sensor readings"
+  }
+]

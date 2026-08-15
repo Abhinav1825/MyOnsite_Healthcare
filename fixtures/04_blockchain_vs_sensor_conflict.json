@@ -1,0 +1,22 @@
+[
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_004",
+    "timestamp": "2026-08-15T07:00:00Z",
+    "data": { "position": { "x": 0.0, "y": 0.0 }, "velocity": 18.0, "confidence": 0.90, "status": "safe" }
+  },
+  {
+    "source": "blockchain",
+    "vehicle_id": "veh_004",
+    "timestamp": "2026-08-15T07:01:00Z",
+    "data": { "check_type": "emissions", "compliance_status": "fail", "certificate_id": "cert_1001" },
+    "_note": "blockchain is NEWER than the last sensor reading and conflicts with it - blockchain should win (final: alert)"
+  },
+  {
+    "source": "sensor",
+    "vehicle_id": "veh_004",
+    "timestamp": "2026-08-15T07:10:00Z",
+    "data": { "position": { "x": 40.0, "y": 2.0 }, "velocity": 19.0, "confidence": 0.90, "status": "safe" },
+    "_note": "this sensor reading is NEWER than the 07:01 blockchain log, so the (now-stale) blockchain conflict should be ignored - sensor should win (final: safe)"
+  }
+]

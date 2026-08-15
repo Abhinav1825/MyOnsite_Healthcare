@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vehicle Safety Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Vehicle Safety Reconciliation Dashboard</h1>
+    <button id="refresh-btn">Refresh</button>
+  </header>
+
+  <main>
+    <section id="vehicles-section">
+      <h2>Vehicles</h2>
+      <table id="vehicles-table">
+        <thead>
+          <tr>
+            <th>Vehicle ID</th>
+            <th>Safety State</th>
+            <th>Timestamp</th>
+            <th>Source of Truth</th>
+            <th>Decision Reason</th>
+          </tr>
+        </thead>
+        <tbody id="vehicles-tbody">
+          <tr><td colspan="5" class="empty">Loading&hellip;</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="audit-section">
+      <h2 id="audit-title">Audit Trail</h2>
+      <p id="audit-hint" class="hint">Click a vehicle row above to see its full decision history.</p>
+      <table id="audit-table" hidden>
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>Version</th>
+            <th>Final State</th>
+            <th>Conflicts Resolved</th>
+            <th>Decision Reason</th>
+            <th>Events Considered</th>
+          </tr>
+        </thead>
+        <tbody id="audit-tbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
