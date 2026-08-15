@@ -1,0 +1,189 @@
+[
+  {
+    "conflicts_resolved": {
+      "sensor_vs_ai": "used_ai"
+    },
+    "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.85",
+    "events_considered": [
+      "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+      "440b926e7606d31fa2e6a13ccc6e78515ccbf0ceab4ca4cf3c3710f5e1085717"
+    ],
+    "final_state": "danger",
+    "generated_at": "2026-08-15T08:46:25.745000+00:00",
+    "timestamp": "2026-08-15T07:10:00+00:00",
+    "vehicle_id": "veh_003",
+    "version": 2
+  },
+  {
+    "conflicts_resolved": {
+      "sensor_vs_ai": "used_ai"
+    },
+    "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.92",
+    "events_considered": [
+      "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+      "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0"
+    ],
+    "final_state": "danger",
+    "generated_at": "2026-08-15T08:46:25.718000+00:00",
+    "timestamp": "2026-08-15T07:10:00+00:00",
+    "vehicle_id": "veh_003",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {
+      "blockchain_vs_sensor": "used_sensor"
+    },
+    "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
+    "events_considered": [
+      "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
+      "e0e2284dae61a63414b187f99152a86cf85df19f95903157276fb198797ca6e7"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.837000+00:00",
+    "timestamp": "2026-08-15T07:10:00+00:00",
+    "vehicle_id": "veh_004",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "f1cb4a7d5f8a114c7ba30838f5fd78a8397a17e26fdbae500e062384c81d08be"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.541000+00:00",
+    "timestamp": "2026-08-15T07:05:00+00:00",
+    "vehicle_id": "veh_001",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_and_ai_agree_safe",
+    "events_considered": [
+      "5f545b94f67b1cd1363933a2b3a0335d3283deb43883fc27fcd9c1fe0b0ab879",
+      "bfd03576334a9d3189e8a7db29049a5fcfe98c858f6eb22089ab29ba13b9feaa"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.591000+00:00",
+    "timestamp": "2026-08-15T07:03:30+00:00",
+    "vehicle_id": "veh_001",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "bfd03576334a9d3189e8a7db29049a5fcfe98c858f6eb22089ab29ba13b9feaa"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.572000+00:00",
+    "timestamp": "2026-08-15T07:02:00+00:00",
+    "vehicle_id": "veh_001",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {
+      "blockchain_vs_sensor": "used_blockchain"
+    },
+    "decision_reason": "blockchain_newer_than_sensor",
+    "events_considered": [
+      "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08",
+      "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328"
+    ],
+    "final_state": "alert",
+    "generated_at": "2026-08-15T08:46:25.808000+00:00",
+    "timestamp": "2026-08-15T07:01:00+00:00",
+    "vehicle_id": "veh_004",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {
+      "sensor_vs_sensor": "resolved_by_highest_confidence"
+    },
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe",
+      "bfb235b52636caccc710e4d79eeacb992e860c947dab48d1b0736b843f2ba9f2"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.651000+00:00",
+    "timestamp": "2026-08-15T07:00:01+00:00",
+    "vehicle_id": "veh_002",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {
+      "sensor_vs_ai": "used_sensor"
+    },
+    "decision_reason": "sensor_confidence_0.95",
+    "events_considered": [
+      "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0",
+      "da0b10fd201298fc0132b6153d16d994dff284b4094bc51491465f08a4bd183c"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.701000+00:00",
+    "timestamp": "2026-08-15T07:00:00+00:00",
+    "vehicle_id": "veh_003",
+    "version": 2
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "a29d62caf663c03c5d4f61680dc85592ded15e8ddbe706748ef57f232ecb4fba"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.517000+00:00",
+    "timestamp": "2026-08-15T07:00:00+00:00",
+    "vehicle_id": "veh_001",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.620000+00:00",
+    "timestamp": "2026-08-15T07:00:00+00:00",
+    "vehicle_id": "veh_002",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "da0b10fd201298fc0132b6153d16d994dff284b4094bc51491465f08a4bd183c"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.684000+00:00",
+    "timestamp": "2026-08-15T07:00:00+00:00",
+    "vehicle_id": "veh_003",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.776000+00:00",
+    "timestamp": "2026-08-15T07:00:00+00:00",
+    "vehicle_id": "veh_004",
+    "version": 1
+  },
+  {
+    "conflicts_resolved": {},
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "d8f07591a39eca3c37d099ceb3a44833d1fb3f11f5dd22b49b19dd8836bd2bd4"
+    ],
+    "final_state": "safe",
+    "generated_at": "2026-08-15T08:46:25.871000+00:00",
+    "timestamp": "2026-08-15T07:00:00+00:00",
+    "vehicle_id": "veh_005",
+    "version": 1
+  }
+]

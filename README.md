@@ -104,6 +104,34 @@ quick manual proof of idempotency.
   whether anything unexpectedly changed (it shouldn't, if the system is deterministic)
 - Mongo collection: `audit_trail` in the `vehicle_safety` database
 
+## Audit/decision-trace output files
+
+`audit_output/` contains a static, committed snapshot of the audit trail and vehicle
+states produced by loading the 5 fixtures — the literal "audit/decision-trace output
+files" deliverable, so it can be inspected without running the system:
+
+- `current_vehicle_states.json` — latest state per vehicle
+- `audit_trail_full.json` — every decision-log entry, all vehicles
+- `<vehicle_id>.json` — one file per vehicle with its full state history + audit trail
+
+Regenerate it any time with:
+```bash
+python fixtures/load_fixtures.py
+python fixtures/export_audit_output.py
+```
+
+## Performance
+
+The Docker image runs the app under **gunicorn** (4 workers × 4 threads), not Flask's
+single-threaded dev server — that distinction matters for the NFR target below. Verified
+with a 300-event concurrent load test (`concurrency=40`) against the dockerized stack:
+
+| Metric | Target | Measured |
+|---|---|---|
+| Throughput | ≥100 events/sec | **158.9 events/sec** |
+| Latency (p95) | <500ms | **312ms** |
+| Success rate | — | 100% (300/300) |
+
 ## Fixtures (edge cases)
 
 | File | Scenario |

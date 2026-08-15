@@ -1,0 +1,100 @@
+[
+  {
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "f1cb4a7d5f8a114c7ba30838f5fd78a8397a17e26fdbae500e062384c81d08be"
+    ],
+    "interpolated": false,
+    "position": {
+      "x": 25.0,
+      "y": 30.0
+    },
+    "reconciled_at": "2026-08-15T08:46:25.541000+00:00",
+    "safety_state": "safe",
+    "source_of_truth": "sensor",
+    "superseded": false,
+    "timestamp": "2026-08-15T07:05:00+00:00",
+    "vehicle_id": "veh_001",
+    "velocity": 16.0,
+    "version": 1
+  },
+  {
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe",
+      "bfb235b52636caccc710e4d79eeacb992e860c947dab48d1b0736b843f2ba9f2"
+    ],
+    "interpolated": false,
+    "position": {
+      "x": 5.4,
+      "y": 5.1
+    },
+    "reconciled_at": "2026-08-15T08:46:25.651000+00:00",
+    "safety_state": "safe",
+    "source_of_truth": "sensor",
+    "superseded": false,
+    "timestamp": "2026-08-15T07:00:01+00:00",
+    "vehicle_id": "veh_002",
+    "velocity": 12.3,
+    "version": 1
+  },
+  {
+    "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.85",
+    "events_considered": [
+      "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+      "440b926e7606d31fa2e6a13ccc6e78515ccbf0ceab4ca4cf3c3710f5e1085717"
+    ],
+    "interpolated": false,
+    "position": {
+      "x": 50.0,
+      "y": 5.0
+    },
+    "reconciled_at": "2026-08-15T08:46:25.745000+00:00",
+    "safety_state": "danger",
+    "source_of_truth": "ai",
+    "superseded": false,
+    "timestamp": "2026-08-15T07:10:00+00:00",
+    "vehicle_id": "veh_003",
+    "velocity": 22.0,
+    "version": 2
+  },
+  {
+    "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
+    "events_considered": [
+      "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
+      "e0e2284dae61a63414b187f99152a86cf85df19f95903157276fb198797ca6e7"
+    ],
+    "interpolated": false,
+    "position": {
+      "x": 40.0,
+      "y": 2.0
+    },
+    "reconciled_at": "2026-08-15T08:46:25.837000+00:00",
+    "safety_state": "safe",
+    "source_of_truth": "sensor",
+    "superseded": false,
+    "timestamp": "2026-08-15T07:10:00+00:00",
+    "vehicle_id": "veh_004",
+    "velocity": 19.0,
+    "version": 1
+  },
+  {
+    "decision_reason": "sensor_only_source",
+    "events_considered": [
+      "d8f07591a39eca3c37d099ceb3a44833d1fb3f11f5dd22b49b19dd8836bd2bd4"
+    ],
+    "interpolated": false,
+    "position": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "reconciled_at": "2026-08-15T08:46:25.870000+00:00",
+    "safety_state": "safe",
+    "source_of_truth": "sensor",
+    "superseded": false,
+    "timestamp": "2026-08-15T07:00:00+00:00",
+    "vehicle_id": "veh_005",
+    "velocity": 10.0,
+    "version": 1
+  }
+]

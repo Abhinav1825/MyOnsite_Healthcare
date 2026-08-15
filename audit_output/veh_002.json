@@ -1,0 +1,73 @@
+{
+  "vehicle_id": "veh_002",
+  "state_history": [
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe",
+        "bfb235b52636caccc710e4d79eeacb992e860c947dab48d1b0736b843f2ba9f2"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 5.4,
+        "y": 5.1
+      },
+      "reconciled_at": "2026-08-15T08:46:25.651000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:00:01+00:00",
+      "vehicle_id": "veh_002",
+      "velocity": 12.3,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 5.0,
+        "y": 5.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.619000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_002",
+      "velocity": 12.0,
+      "version": 1
+    }
+  ],
+  "audit_trail": [
+    {
+      "conflicts_resolved": {
+        "sensor_vs_sensor": "resolved_by_highest_confidence"
+      },
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe",
+        "bfb235b52636caccc710e4d79eeacb992e860c947dab48d1b0736b843f2ba9f2"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.651000+00:00",
+      "timestamp": "2026-08-15T07:00:01+00:00",
+      "vehicle_id": "veh_002",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "528407840c8c085989dacfccd94cdbc8135d776825e6dd7dbc9cde15f5e4eabe"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.620000+00:00",
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_002",
+      "version": 1
+    }
+  ]
+}

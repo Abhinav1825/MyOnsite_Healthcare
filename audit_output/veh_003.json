@@ -1,0 +1,143 @@
+{
+  "vehicle_id": "veh_003",
+  "state_history": [
+    {
+      "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.85",
+      "events_considered": [
+        "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+        "440b926e7606d31fa2e6a13ccc6e78515ccbf0ceab4ca4cf3c3710f5e1085717"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 50.0,
+        "y": 5.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.745000+00:00",
+      "safety_state": "danger",
+      "source_of_truth": "ai",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:10:00+00:00",
+      "vehicle_id": "veh_003",
+      "velocity": 22.0,
+      "version": 2
+    },
+    {
+      "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.92",
+      "events_considered": [
+        "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+        "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 50.0,
+        "y": 5.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.717000+00:00",
+      "safety_state": "danger",
+      "source_of_truth": "ai",
+      "superseded": true,
+      "timestamp": "2026-08-15T07:10:00+00:00",
+      "vehicle_id": "veh_003",
+      "velocity": 22.0,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_confidence_0.95",
+      "events_considered": [
+        "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0",
+        "da0b10fd201298fc0132b6153d16d994dff284b4094bc51491465f08a4bd183c"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.700000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_003",
+      "velocity": 20.0,
+      "version": 2
+    },
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "da0b10fd201298fc0132b6153d16d994dff284b4094bc51491465f08a4bd183c"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.683000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": true,
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_003",
+      "velocity": 20.0,
+      "version": 1
+    }
+  ],
+  "audit_trail": [
+    {
+      "conflicts_resolved": {
+        "sensor_vs_ai": "used_ai"
+      },
+      "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.85",
+      "events_considered": [
+        "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+        "440b926e7606d31fa2e6a13ccc6e78515ccbf0ceab4ca4cf3c3710f5e1085717"
+      ],
+      "final_state": "danger",
+      "generated_at": "2026-08-15T08:46:25.745000+00:00",
+      "timestamp": "2026-08-15T07:10:00+00:00",
+      "vehicle_id": "veh_003",
+      "version": 2
+    },
+    {
+      "conflicts_resolved": {
+        "sensor_vs_ai": "used_ai"
+      },
+      "decision_reason": "sensor_confidence_0.50_below_threshold_used_ai_confidence_0.92",
+      "events_considered": [
+        "0c7fe83955cef2bc01de451371ef84cad36d344f9ce5ae95f5829b8765f8b037",
+        "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0"
+      ],
+      "final_state": "danger",
+      "generated_at": "2026-08-15T08:46:25.718000+00:00",
+      "timestamp": "2026-08-15T07:10:00+00:00",
+      "vehicle_id": "veh_003",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {
+        "sensor_vs_ai": "used_sensor"
+      },
+      "decision_reason": "sensor_confidence_0.95",
+      "events_considered": [
+        "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0",
+        "da0b10fd201298fc0132b6153d16d994dff284b4094bc51491465f08a4bd183c"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.701000+00:00",
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_003",
+      "version": 2
+    },
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "da0b10fd201298fc0132b6153d16d994dff284b4094bc51491465f08a4bd183c"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.684000+00:00",
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_003",
+      "version": 1
+    }
+  ]
+}

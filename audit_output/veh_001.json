@@ -1,0 +1,133 @@
+{
+  "vehicle_id": "veh_001",
+  "state_history": [
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "f1cb4a7d5f8a114c7ba30838f5fd78a8397a17e26fdbae500e062384c81d08be"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 25.0,
+        "y": 30.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.541000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:05:00+00:00",
+      "vehicle_id": "veh_001",
+      "velocity": 16.0,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_and_ai_agree_safe",
+      "events_considered": [
+        "5f545b94f67b1cd1363933a2b3a0335d3283deb43883fc27fcd9c1fe0b0ab879",
+        "bfd03576334a9d3189e8a7db29049a5fcfe98c858f6eb22089ab29ba13b9feaa"
+      ],
+      "interpolated": true,
+      "position": {
+        "x": 20.5,
+        "y": 27.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.590000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:03:30+00:00",
+      "vehicle_id": "veh_001",
+      "velocity": 15.7,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "bfd03576334a9d3189e8a7db29049a5fcfe98c858f6eb22089ab29ba13b9feaa"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 16.0,
+        "y": 24.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.572000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:02:00+00:00",
+      "vehicle_id": "veh_001",
+      "velocity": 15.4,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "a29d62caf663c03c5d4f61680dc85592ded15e8ddbe706748ef57f232ecb4fba"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 10.0,
+        "y": 20.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.516000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_001",
+      "velocity": 15.0,
+      "version": 1
+    }
+  ],
+  "audit_trail": [
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "f1cb4a7d5f8a114c7ba30838f5fd78a8397a17e26fdbae500e062384c81d08be"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.541000+00:00",
+      "timestamp": "2026-08-15T07:05:00+00:00",
+      "vehicle_id": "veh_001",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_and_ai_agree_safe",
+      "events_considered": [
+        "5f545b94f67b1cd1363933a2b3a0335d3283deb43883fc27fcd9c1fe0b0ab879",
+        "bfd03576334a9d3189e8a7db29049a5fcfe98c858f6eb22089ab29ba13b9feaa"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.591000+00:00",
+      "timestamp": "2026-08-15T07:03:30+00:00",
+      "vehicle_id": "veh_001",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "bfd03576334a9d3189e8a7db29049a5fcfe98c858f6eb22089ab29ba13b9feaa"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.572000+00:00",
+      "timestamp": "2026-08-15T07:02:00+00:00",
+      "vehicle_id": "veh_001",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "a29d62caf663c03c5d4f61680dc85592ded15e8ddbe706748ef57f232ecb4fba"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.517000+00:00",
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_001",
+      "version": 1
+    }
+  ]
+}

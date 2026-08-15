@@ -1,0 +1,108 @@
+{
+  "vehicle_id": "veh_004",
+  "state_history": [
+    {
+      "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
+      "events_considered": [
+        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
+        "e0e2284dae61a63414b187f99152a86cf85df19f95903157276fb198797ca6e7"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 40.0,
+        "y": 2.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.837000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:10:00+00:00",
+      "vehicle_id": "veh_004",
+      "velocity": 19.0,
+      "version": 1
+    },
+    {
+      "decision_reason": "blockchain_newer_than_sensor",
+      "events_considered": [
+        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08",
+        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.808000+00:00",
+      "safety_state": "alert",
+      "source_of_truth": "blockchain",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:01:00+00:00",
+      "vehicle_id": "veh_004",
+      "velocity": 18.0,
+      "version": 1
+    },
+    {
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08"
+      ],
+      "interpolated": false,
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "reconciled_at": "2026-08-15T08:46:25.776000+00:00",
+      "safety_state": "safe",
+      "source_of_truth": "sensor",
+      "superseded": false,
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_004",
+      "velocity": 18.0,
+      "version": 1
+    }
+  ],
+  "audit_trail": [
+    {
+      "conflicts_resolved": {
+        "blockchain_vs_sensor": "used_sensor"
+      },
+      "decision_reason": "sensor_only_source_blockchain_conflict_ignored_stale",
+      "events_considered": [
+        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328",
+        "e0e2284dae61a63414b187f99152a86cf85df19f95903157276fb198797ca6e7"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.837000+00:00",
+      "timestamp": "2026-08-15T07:10:00+00:00",
+      "vehicle_id": "veh_004",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {
+        "blockchain_vs_sensor": "used_blockchain"
+      },
+      "decision_reason": "blockchain_newer_than_sensor",
+      "events_considered": [
+        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08",
+        "408c066c4bf064dd604258ac5f9b6c4a1d8c2f327867fb32d58b1d0dcfb02328"
+      ],
+      "final_state": "alert",
+      "generated_at": "2026-08-15T08:46:25.808000+00:00",
+      "timestamp": "2026-08-15T07:01:00+00:00",
+      "vehicle_id": "veh_004",
+      "version": 1
+    },
+    {
+      "conflicts_resolved": {},
+      "decision_reason": "sensor_only_source",
+      "events_considered": [
+        "1f1a14ce58fd64609de12bdce80c7fd9a656973c704aa81e6a9320863aec5c08"
+      ],
+      "final_state": "safe",
+      "generated_at": "2026-08-15T08:46:25.776000+00:00",
+      "timestamp": "2026-08-15T07:00:00+00:00",
+      "vehicle_id": "veh_004",
+      "version": 1
+    }
+  ]
+}

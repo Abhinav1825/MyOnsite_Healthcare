@@ -11,4 +11,7 @@ COPY run.py .
 
 EXPOSE 5000
 
-CMD ["python", "run.py"]
+# gunicorn, not the Flask dev server: multiple worker processes so the app
+# can actually handle concurrent load (the dev server used by `python
+# run.py` is single-threaded and only intended for local development).
+CMD ["gunicorn", "-w", "4", "--threads", "4", "-b", "0.0.0.0:5000", "run:app"]
