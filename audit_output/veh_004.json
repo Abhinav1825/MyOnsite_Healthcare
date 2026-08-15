@@ -12,7 +12,7 @@
         "x": 3040.0,
         "y": 3002.0
       },
-      "reconciled_at": "2026-08-15T09:09:42.605000+00:00",
+      "reconciled_at": "2026-08-15T09:22:41.092000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -32,7 +32,7 @@
         "x": 3040.0,
         "y": 3002.0
       },
-      "reconciled_at": "2026-08-15T09:09:42.486000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.964000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -52,7 +52,7 @@
         "x": 3040.0,
         "y": 3002.0
       },
-      "reconciled_at": "2026-08-15T09:09:42.071000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.537000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -72,7 +72,7 @@
         "x": 3000.0,
         "y": 3000.0
       },
-      "reconciled_at": "2026-08-15T09:09:42.043000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.493000+00:00",
       "safety_state": "alert",
       "source_of_truth": "blockchain",
       "superseded": false,
@@ -91,7 +91,7 @@
         "x": 3000.0,
         "y": 3000.0
       },
-      "reconciled_at": "2026-08-15T09:09:42.024000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.468000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -110,7 +110,7 @@
         "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:42.606000+00:00",
+      "generated_at": "2026-08-15T09:22:41.092000+00:00",
       "timestamp": "2026-08-15T07:20:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1
@@ -123,7 +123,7 @@
         "e075f6afcb18ec17cec872a0bfddc20c523397d1f06ef9cdcb89719811368520"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:42.487000+00:00",
+      "generated_at": "2026-08-15T09:22:40.965000+00:00",
       "timestamp": "2026-08-15T07:15:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1
@@ -138,7 +138,7 @@
         "93e40a36688ed2d928ed6430b261c1d244052387a10873b533b5d84686e9ddf6"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:42.071000+00:00",
+      "generated_at": "2026-08-15T09:22:40.538000+00:00",
       "timestamp": "2026-08-15T07:10:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1
@@ -153,7 +153,7 @@
         "bf0dd612b3465d446d36d9a52b57908178e2b2ac3b293621d1cd4427b8cefd20"
       ],
       "final_state": "alert",
-      "generated_at": "2026-08-15T09:09:42.044000+00:00",
+      "generated_at": "2026-08-15T09:22:40.494000+00:00",
       "timestamp": "2026-08-15T07:01:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1
@@ -165,7 +165,7 @@
         "bf0dd612b3465d446d36d9a52b57908178e2b2ac3b293621d1cd4427b8cefd20"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:42.024000+00:00",
+      "generated_at": "2026-08-15T09:22:40.470000+00:00",
       "timestamp": "2026-08-15T07:00:00+00:00",
       "vehicle_id": "veh_004",
       "version": 1

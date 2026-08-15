@@ -85,21 +85,16 @@ fixtures/               6 edge-case datasets + load_fixtures.py + export_audit_o
 tests/                  pytest suite (unit + integration, mongomock-backed)
 ```
 
-## Running it
+## Getting started
 
 ```bash
+git clone https://github.com/Abhinav1825/MyOnsite_Healthcare.git
+cd MyOnsite_Healthcare
 docker compose up -d --build
 ```
 
 This starts MongoDB and the Flask app (http://localhost:5000). Open that URL for the
-dashboard, or use the API directly:
-
-```bash
-curl -X POST http://localhost:5000/events \
-  -H "Content-Type: application/json" \
-  -d '{"source":"sensor","vehicle_id":"veh_1","timestamp":"2026-08-15T07:00:00Z",
-       "data":{"position":{"x":1,"y":2},"velocity":10,"confidence":0.9,"status":"safe"}}'
-```
+dashboard, or use the API directly - see the full endpoint list below.
 
 ### Loading the fixture datasets
 
@@ -119,6 +114,59 @@ quick manual proof of idempotency.
 - `POST /replay` — re-reconciles every stored (vehicle_id, timestamp) pair and reports
   whether anything unexpectedly changed (it shouldn't, if the system is deterministic)
 - Mongo collection: `audit_trail` in the `vehicle_safety` database
+
+## API reference (every endpoint, with a runnable example)
+
+**Ingest an event:**
+```bash
+curl -X POST http://localhost:5000/events -H "Content-Type: application/json" -d '{
+  "source":"sensor","vehicle_id":"veh_1","timestamp":"2026-08-15T07:00:00Z",
+  "data":{"position":{"x":1,"y":2},"velocity":10,"confidence":0.9,"status":"safe"}}'
+```
+
+**Read vehicle state:**
+```bash
+curl http://localhost:5000/vehicles                    # current state, every vehicle
+curl http://localhost:5000/vehicles/veh_1               # full history, one vehicle
+curl http://localhost:5000/vehicles/trajectories        # position-over-time, every vehicle
+```
+
+**Read the audit trail:**
+```bash
+curl http://localhost:5000/audit                        # every decision, every vehicle
+curl "http://localhost:5000/audit?vehicle_id=veh_1"      # filtered
+curl http://localhost:5000/audit/veh_1                   # one vehicle, newest first
+```
+
+**Replay / consistency check:**
+```bash
+curl -X POST http://localhost:5000/replay
+```
+
+**Proximity alerts (bonus):**
+```bash
+curl http://localhost:5000/proximity                     # all alerts
+curl "http://localhost:5000/proximity?vehicle_id=veh_1"  # filtered to one vehicle
+```
+
+**Mock blockchain ledger (bonus):**
+```bash
+curl -X POST http://localhost:5000/blockchain/submit -H "Content-Type: application/json" -d '{
+  "vehicle_id":"veh_1","timestamp":"2026-08-15T07:00:00Z",
+  "data":{"check_type":"emissions","compliance_status":"pass","certificate_id":"cert_001"}}'
+
+curl http://localhost:5000/blockchain/veh_1               # full chain
+curl http://localhost:5000/blockchain/veh_1/verify        # tamper-evidence check
+```
+
+To see `/verify` actually catch tampering, corrupt a stored block directly (simulating an
+attacker bypassing the API) and re-check it - this is exactly what was done to validate the
+feature during development:
+```bash
+docker compose exec mongo mongosh vehicle_safety --eval \
+  "db.mock_blockchain.updateOne({vehicle_id:'veh_1', block_index:0}, {\$set: {'data.compliance_status': 'fail'}})"
+curl http://localhost:5000/blockchain/veh_1/verify         # now valid:false
+```
 
 ## Audit/decision-trace output files
 
@@ -143,9 +191,14 @@ python fixtures/export_audit_output.py
 
 The Docker image runs the app under **gunicorn** (4 workers × 4 threads), not Flask's
 single-threaded dev server — that distinction matters for the NFR target below. Verified
-with a 300-event concurrent load test (`concurrency=40`, vehicles spread across
+with `scripts/load_test.py` (300 events, concurrency=40, vehicles spread across
 well-separated position zones - see "A performance lesson" below) against the dockerized
-stack:
+stack. Reproduce it yourself:
+
+```bash
+.venv/Scripts/pip install -r requirements.txt   # once - needs `requests`
+python scripts/load_test.py http://localhost:5000 300 40
+```
 
 | Metric | Target | Measured |
 |---|---|---|

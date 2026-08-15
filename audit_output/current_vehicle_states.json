@@ -9,7 +9,7 @@
       "x": 25.0,
       "y": 30.0
     },
-    "reconciled_at": "2026-08-15T09:09:41.819000+00:00",
+    "reconciled_at": "2026-08-15T09:22:40.245000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
@@ -29,7 +29,7 @@
       "x": 1005.4,
       "y": 1005.1
     },
-    "reconciled_at": "2026-08-15T09:09:41.902000+00:00",
+    "reconciled_at": "2026-08-15T09:22:40.346000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
@@ -49,7 +49,7 @@
       "x": 2050.0,
       "y": 2005.0
     },
-    "reconciled_at": "2026-08-15T09:09:41.983000+00:00",
+    "reconciled_at": "2026-08-15T09:22:40.447000+00:00",
     "safety_state": "danger",
     "source_of_truth": "ai",
     "superseded": false,
@@ -69,7 +69,7 @@
       "x": 3040.0,
       "y": 3002.0
     },
-    "reconciled_at": "2026-08-15T09:09:42.605000+00:00",
+    "reconciled_at": "2026-08-15T09:22:41.092000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
@@ -88,7 +88,7 @@
       "x": 4001.0,
       "y": 4001.0
     },
-    "reconciled_at": "2026-08-15T09:09:42.089000+00:00",
+    "reconciled_at": "2026-08-15T09:22:40.581000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
@@ -107,7 +107,7 @@
       "x": 40.0,
       "y": 0.0
     },
-    "reconciled_at": "2026-08-15T09:09:42.262000+00:00",
+    "reconciled_at": "2026-08-15T09:22:40.749000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,
@@ -126,7 +126,7 @@
       "x": 46.0,
       "y": 0.0
     },
-    "reconciled_at": "2026-08-15T09:09:42.285000+00:00",
+    "reconciled_at": "2026-08-15T09:22:40.782000+00:00",
     "safety_state": "safe",
     "source_of_truth": "sensor",
     "superseded": false,

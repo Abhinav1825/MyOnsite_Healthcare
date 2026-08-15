@@ -12,7 +12,7 @@
         "x": 2050.0,
         "y": 2005.0
       },
-      "reconciled_at": "2026-08-15T09:09:41.983000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.447000+00:00",
       "safety_state": "danger",
       "source_of_truth": "ai",
       "superseded": false,
@@ -32,7 +32,7 @@
         "x": 2050.0,
         "y": 2005.0
       },
-      "reconciled_at": "2026-08-15T09:09:41.966000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.426000+00:00",
       "safety_state": "danger",
       "source_of_truth": "ai",
       "superseded": true,
@@ -52,7 +52,7 @@
         "x": 2000.0,
         "y": 2000.0
       },
-      "reconciled_at": "2026-08-15T09:09:41.949000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.395000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -71,7 +71,7 @@
         "x": 2000.0,
         "y": 2000.0
       },
-      "reconciled_at": "2026-08-15T09:09:41.919000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.367000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": true,
@@ -92,7 +92,7 @@
         "440b926e7606d31fa2e6a13ccc6e78515ccbf0ceab4ca4cf3c3710f5e1085717"
       ],
       "final_state": "danger",
-      "generated_at": "2026-08-15T09:09:41.984000+00:00",
+      "generated_at": "2026-08-15T09:22:40.448000+00:00",
       "timestamp": "2026-08-15T07:10:00+00:00",
       "vehicle_id": "veh_003",
       "version": 2
@@ -107,7 +107,7 @@
         "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0"
       ],
       "final_state": "danger",
-      "generated_at": "2026-08-15T09:09:41.966000+00:00",
+      "generated_at": "2026-08-15T09:22:40.426000+00:00",
       "timestamp": "2026-08-15T07:10:00+00:00",
       "vehicle_id": "veh_003",
       "version": 1
@@ -122,7 +122,7 @@
         "7f3b6fa1b049067c1f89af9d8a13ead4010a9aadbdafc24088831f48a36fd0a0"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:41.949000+00:00",
+      "generated_at": "2026-08-15T09:22:40.396000+00:00",
       "timestamp": "2026-08-15T07:00:00+00:00",
       "vehicle_id": "veh_003",
       "version": 2
@@ -134,7 +134,7 @@
         "7a646e295edbc40822b0887aecced22fe127a04d6893d7e9c7abe18a28f2c03e"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:41.920000+00:00",
+      "generated_at": "2026-08-15T09:22:40.368000+00:00",
       "timestamp": "2026-08-15T07:00:00+00:00",
       "vehicle_id": "veh_003",
       "version": 1

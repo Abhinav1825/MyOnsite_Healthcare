@@ -11,7 +11,7 @@
         "x": 4001.0,
         "y": 4001.0
       },
-      "reconciled_at": "2026-08-15T09:09:42.089000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.581000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -29,7 +29,7 @@
         "1dc775cbe37ae94d4c3b82247381ad5ddf91388b0ceaa017350f3f7b8bc692d0"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:42.090000+00:00",
+      "generated_at": "2026-08-15T09:22:40.582000+00:00",
       "timestamp": "2026-08-15T07:00:00+00:00",
       "vehicle_id": "veh_005",
       "version": 1

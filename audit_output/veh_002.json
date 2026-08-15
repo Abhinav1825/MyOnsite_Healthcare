@@ -12,7 +12,7 @@
         "x": 1005.4,
         "y": 1005.1
       },
-      "reconciled_at": "2026-08-15T09:09:41.902000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.346000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -31,7 +31,7 @@
         "x": 1005.0,
         "y": 1005.0
       },
-      "reconciled_at": "2026-08-15T09:09:41.883000+00:00",
+      "reconciled_at": "2026-08-15T09:22:40.321000+00:00",
       "safety_state": "safe",
       "source_of_truth": "sensor",
       "superseded": false,
@@ -52,7 +52,7 @@
         "b73004d2cd496fa219b8518877841cea760bea657bd132139908965920bd32d0"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:41.902000+00:00",
+      "generated_at": "2026-08-15T09:22:40.348000+00:00",
       "timestamp": "2026-08-15T07:00:01+00:00",
       "vehicle_id": "veh_002",
       "version": 1
@@ -64,7 +64,7 @@
         "4cad12d080e96203ec5d2588414fb3daa8765569834e038421c217c8c644de2b"
       ],
       "final_state": "safe",
-      "generated_at": "2026-08-15T09:09:41.884000+00:00",
+      "generated_at": "2026-08-15T09:22:40.322000+00:00",
       "timestamp": "2026-08-15T07:00:00+00:00",
       "vehicle_id": "veh_002",
       "version": 1
